@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dach-kredit"
+version = "2026.1.0"
+authors = [
+  { name="DACH Digitalwerk", email="dach.digitalwerk@gmail.com" },
+]
+description = "Präzisionsrechner für Firmenkredite, Annuitätendarlehen, PAngV Effektivzins, Sondertilgungen, Anschlussfinanzierung und Zins-Stresstest im DACH-Raum (DE / AT / CH)."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "flake8"
+]
+
+[project.scripts]
+dach-kredit = "kredit_dach.cli:main"
+
+[project.urls]
+"Homepage" = "https://dachdigitalwerk.github.io/kredit-annuitaeten-rechner/"
+"Bug Tracker" = "https://github.com/DACHDigitalwerk/kredit-annuitaeten-rechner-dach/issues"
+"Documentation" = "https://dachdigitalwerk.github.io/annuitaetendarlehen-berechnen-formel-tilgungsplan-excel.html"
